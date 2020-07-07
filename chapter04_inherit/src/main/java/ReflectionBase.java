@@ -1,3 +1,4 @@
+import java.lang.reflect.Field;
 import java.util.Random;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Random;
  */
 public class ReflectionBase {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws Exception {
         System.out.println("第一种方式：");
         Employee e = new Employee();
         System.out.printf("e.getClass(): %s \n", e.getClass().getName());
@@ -28,6 +29,10 @@ public class ReflectionBase {
 
         // Class<? extends Double[]> doubleArrayClass1 = Double[].class;
 
+        Field field = e.getClass().getDeclaredField("name");
+        // field.setAccessible(true);
+        System.out.println(field.getDeclaringClass());
+        System.out.println(field.getType());
     }
 
 }
