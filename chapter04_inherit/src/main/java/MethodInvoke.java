@@ -12,7 +12,7 @@ public class MethodInvoke {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method sqrt = Math.class.getMethod("sqrt", double.class);
         // sqrt.invoke()
-        for (double i = 1; i <= 10; i++) {
+        for (double i = 1d; i <= 10; i++) {
             double result = (double) sqrt.invoke(null, i);
             System.out.printf("%f %f  \n", i, result);
         }
