@@ -1,6 +1,7 @@
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
 import java.util.Objects;
@@ -13,6 +14,7 @@ import java.util.Objects;
  */
 @Setter
 @Getter
+@ToString
 public class Employee {
 
     private String name;
