@@ -1,4 +1,6 @@
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 import java.util.function.Supplier;
@@ -11,6 +13,8 @@ import java.util.function.Supplier;
  */
 @Data
 @Accessors(chain = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Pair<T> {
 
     private T first;
@@ -18,6 +22,11 @@ public class Pair<T> {
 
     public static <U extends Comparable> U[] minmax(Supplier<U[]> supplier) {
         return supplier.get();
+    }
+
+    @Override
+    public boolean equals(Object value) {
+        return false;
     }
 
 }
