@@ -35,6 +35,7 @@
         <module>chapter03_programming_structure</module>
         <module>chapter04_inherit</module>
         <module>chapter05_interface</module>
+        <module>chapter07_generic</module>
     </modules>
 
 
